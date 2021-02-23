@@ -1,0 +1,57 @@
+body {
+  font-family: $primary-font;
+}
+
+.regular-text {
+  font-size: $default-font-size;
+  line-height: 1.4;
+  color: $tertiary-color;
+}
+
+.header__logo-text {
+  @extend .regular-text;
+  font-size: 2.4rem;
+  font-family: $logo-font;
+}
+
+.title-big {
+  @extend .regular-text;
+  font-size: 2.6rem;
+}
+
+.title-medium {
+  @extend .regular-text;
+  font-size: 2.2rem;
+}
+
+.title-small {
+  @extend .regular-text;
+  font-size: 1.8rem;
+}
+
+.btn {
+  font: inherit;
+  font-size: $default-font-size;
+  color: $primary-color;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 3px 4px rgba(#000, .3);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: darken($secondary-color, 5%);
+  }
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 1px rgba(#000, .5);
+  }
+}
